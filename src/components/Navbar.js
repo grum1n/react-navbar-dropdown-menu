@@ -30,7 +30,7 @@ function Navbar () {
         <>
             <nav className='navbar'>
                 <Link to='/' className='navbar-logo'>
-                    Grumin
+                    Grumin <i className='fab fa-firstdraft' />
                 </Link>
                 <div className='manu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -46,6 +46,11 @@ function Navbar () {
                             Services <i className='fas fa-caret-down' />
                         </Link>
                         {dropdown && <Dropdown /> }
+                    </li>
+                    <li className='nav-item'>
+                        <Link to='/products' className='nav-links' onClick={closeMobileMenu}>
+                            Products
+                        </Link>
                     </li>
                     <li className='nav-item'>
                         <Link to='/contact-us' className='nav-links' onClick={closeMobileMenu}>
